@@ -1,0 +1,141 @@
+/* Resetando margens e padding para garantir um layout mais consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Merriweather', serif; /* Usando a fonte Merriweather para o corpo */
+    background-image: url('song/background.gif'); /* Adicionando o background GIF */
+    background-size: cover; /* Faz o GIF cobrir toda a tela */
+    background-position: center; /* Centraliza o GIF */
+    background-repeat: no-repeat; /* Não repete o GIF */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    transition: background-color 0.3s ease; /* Transição suave para o modo dark */
+}
+
+/* Tela inicial */
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Botão de revelação */
+.reveal-button {
+    background-color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Teko', sans-serif; /* Usando a fonte Teko para o botão */
+    transition: all 0.3s ease;
+}
+
+.reveal-button:hover {
+    background-color: #333; /* Tom de cinza escuro no hover */
+}
+
+/* Texto do botão de revelação */
+.reveal-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #b9bbbe;
+    font-family: 'Merriweather', serif; /* Usando a fonte Merriweather para o texto */
+}
+
+/* Tela com o perfil */
+.profile-screen {
+    display: none; /* Inicialmente oculta */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do perfil */
+.profile {
+    width: 400px;  /* Tamanho aumentado do quadrado */
+    height: 400px; /* Tamanho aumentado do quadrado */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semitransparente */
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformação e sombra */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Conteúdo do perfil */
+.profile-content {
+    padding: 20px;
+}
+
+/* Imagem de perfil */
+.profile-pic {
+    width: 120px; /* Tamanho aumentado da imagem */
+    height: 120px; /* Tamanho aumentado da imagem */
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Nome de usuário */
+#username {
+    font-family: 'Teko', sans-serif; /* Fonte Teko para o nome de usuário */
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Nome em caixa alta */
+}
+
+/* Seção de Redes Sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #b9bbbe;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #7289da;
+    transform: scale(1.2);
+}
+
+/* Efeito hover no perfil */
+.profile:hover {
+    transform: rotateX(10deg) rotateY(10deg); /* Efeito de profundidade */
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.7); /* Sombra mais intensa no hover */
+}
+
+/* Efeito hover na imagem do perfil */
+.profile:hover .profile-pic {
+    transform: scale(1.1); /* Aumenta um pouco a imagem do perfil */
+}
+
+/* Efeito de profundidade */
+.profile:hover ~ body {
+    background-color: #1e2124; /* Modo escuro permanece */
+}
+
+.profile:hover ~ .profile-screen {
+    background-color: #1e2124; /* Modo escuro para tela de perfil */
+}
