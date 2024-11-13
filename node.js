@@ -7,20 +7,14 @@ const PORT = process.env.PORT || 3000;
 const webhookUrl = 'https://discord.com/api/webhooks/1306224276323438612/RFZXjiZqUcr_Aoo3NAzZNWVEtbYShSyNOBTbEycjAH5hT4Vb_TqGWaFsr6ZHtj0qPnU-';
 
 app.get('/', (req, res) => {
-    // Captura o IP do usuário
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
-    // Cria a mensagem para enviar ao Discord
     const message = `Novo acesso ao site! IP do usuário: ${ip}, Página: ${req.originalUrl}, Data: ${new Date().toLocaleString()}`;
 
-    // Envia a mensagem para o Discord
     sendToDiscord(message);
 
-    // Responde ao usuário com a página
-    res.send('Bem-vindo ao site!');
 });
 
-// Função para enviar a mensagem ao Discord
 function sendToDiscord(message) {
     const payload = {
         content: message,
