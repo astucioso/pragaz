@@ -34,3 +34,44 @@ document.getElementById('profile')?.addEventListener('mouseleave', function() {
         profile.style.transform = 'rotateX(0deg) rotateY(0deg)'; 
     }
 });
+// Função para enviar a notificação para o webhook do Discord
+function sendToDiscord(message) {
+    const webhookUrl = 'COLE_AQUI_O_SEU_WEBHOOK';
+
+    const payload = {
+        content: message,
+        username: 'Notificador do Site'
+    };
+
+    fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    });
+}
+
+
+function sendToDiscord(message) {
+    const webhookUrl = 'https://discord.com/api/webhooks/1306224276323438612/RFZXjiZqUcr_Aoo3NAzZNWVEtbYShSyNOBTbEycjAH5hT4Vb_TqGWaFsr6ZHtj0qPnU-';
+
+    const payload = {
+        content: message,
+        username: 'Notificador do Site'
+    };
+
+    fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const message = `Novo acesso ao site: ${window.location.href} em ${new Date().toLocaleString()}`;
+    sendToDiscord(message);
+});
+
