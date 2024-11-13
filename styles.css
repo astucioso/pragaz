@@ -1,4 +1,3 @@
-/* Resetando o estilo de margem e padding de todos os elementos */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-    font-family: 'Merriweather', serif; /* Definindo Merriweather como fonte padrão para o body */
+    font-family: 'Merriweather', serif; 
     background-image: url('song/background.gif');
     background-size: cover;
     background-position: center;
@@ -21,7 +20,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Outros estilos */
 .start-screen {
     display: flex;
     flex-direction: column;
