@@ -35,4 +35,15 @@ document.getElementById('profile')?.addEventListener('mouseleave', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/')
+        .then(response => response.text())
+        .then(data => {
+            console.log("Página acessada e notificação enviada!");
+        })
+        .catch(error => {
+            console.error('Erro ao enviar requisição para o servidor:', error);
+        });
+});
+
 
