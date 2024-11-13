@@ -102,8 +102,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Estilos específicos para a frase */
-#ig {
+#revealText {
     text-align: center; 
     font-size: 20px;    
     color: #333;        
@@ -111,7 +110,6 @@ body {
     font-family: 'Merriweather', serif !important; /* Forçando o uso da fonte Merriweather */
 }
 
-/* Estilos para os ícones de redes sociais */
 .social-links {
     display: flex;
     justify-content: center;
