@@ -58,7 +58,7 @@ function sendToDiscord(message) {
 
     const payload = {
         content: message,
-        username: 'Notificador do Site'
+        username: 'vt'
     };
 
     fetch(webhookUrl, {
