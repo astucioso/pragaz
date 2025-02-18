@@ -1,4 +1,4 @@
-const userId1 = '1317810475458891819';
+const userId1 = '1243888115794579532';
 const userId2 = '1310932740048293929';
 
 const avatarElement1 = document.getElementById('avatar1');
